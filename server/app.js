@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/../client/dist'));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Vlad API!');
+  res.send('Welcome to TopView Bike Rentals!');
 });
 
 module.exports = app;
