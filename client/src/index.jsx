@@ -51,14 +51,9 @@ class App extends React.Component {
       <div className='app'>
         <header className='navbar'>
           <div className='nav-header'>
-            <div className='nav-left'>
-              <span className='logo'>
-                <img className='logo-image' src='./img/bike-logo.png' />
-              </span>
-            </div>
-            <div className='page-title'>
-              <h1>TopView Bike Rentals</h1>
-            </div>
+              <div className='page-title'>
+                <h1>TopView Bike Rentals</h1>
+              </div>
             <div className='nav-right'>
               <img className='cart' src='./img/cart-icon.png' />
             </div>
