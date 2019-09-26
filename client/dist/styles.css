@@ -1,13 +1,13 @@
 html {
   height: auto;
+  background: black url('./img/bikebackground.jpeg');
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 body {
-  font-family: 'Lato', Helvetica, sans-serif;
-  background-image: linear-gradient(
-    rgb(244, 244, 255),
-    rgba(204, 0, 255, 0.85)
-  );
+  font-family: 'Montserrat', sans-serif;
   height: 100%;
 }
 
@@ -19,10 +19,7 @@ div.app {
 
 div.main {
   display: inline-block;
-}
-
-div.page-title {
-  margin-left: 100px;
+  width: 100%;
 }
 
 .page-title h1 {
@@ -45,28 +42,59 @@ div.nav-header {
   width: 100%;
 }
 
+div.page-title {
+  margin-left: 15px;
+}
 
 img.cart {
   height: 75px;
   margin-right: 50px;
 }
 
-
 div.products {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-ul.bicycles, ul.accessories {
+.products h2{
+  font-weight: 500;
+}
+
+ul.bicycles,
+ul.accessories {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 10px;
   padding: 10px;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   list-style: none;
 }
 
-.product-card {
-  margin: 10px;
+li.product-card {
+  margin: 30px;
   box-shadow: 1px 1px 5px lightgray;
+}
+
+li.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+div.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(115, 115, 126, 0.8);
+  color: white;
+}
+
+div.image-container {
+  height: 250px;
+}
+
+p.product-price, p.product-title{
+  font-weight: 500;
 }
