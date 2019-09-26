@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: []
+      bicycles: [],
+      accessories: []
     };
 
     this.getProducts = this.getProducts.bind(this);
@@ -21,8 +22,20 @@ class App extends React.Component {
     Axios.get('/products')
       .then(response => {
         const products = response.data;
+        let bicycles = [];
+        let accessories = [];
+
+        for (let product of products) {
+          if (product.product_type === 'bike') {
+            bicycles.push(product);
+          } else {
+            accessories.push(product);
+          }
+        }
+
         this.setState({
-          products: products
+          bicycles: bicycles,
+          accessories: accessories
         });
       })
       .catch(error => {
@@ -31,7 +44,8 @@ class App extends React.Component {
   }
 
   render() {
-    const products = this.state.products;
+    const bicycles = this.state.bicycles;
+    const accessories = this.state.accessories;
 
     return (
       <div className='app'>
@@ -46,12 +60,12 @@ class App extends React.Component {
               <h1>TopView Bike Rentals</h1>
             </div>
             <div className='nav-right'>
-              <img className='cart' src='./img/gear-logo.png' />
+              <img className='cart' src='./img/cart-icon.png' />
             </div>
           </div>
         </header>
         <div className='main'>
-          <Products products={products} />
+          <Products bicycles={bicycles} accessories={accessories} />
         </div>
       </div>
     );
