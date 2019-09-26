@@ -1,6 +1,6 @@
-# Lorem Ipsum
+# Bike Rentals
 
-Lorem ipsum sit dolor amet
+TopView Bike Rentals 
 
 
 [www.websitename.com](http://www.awslink.com)

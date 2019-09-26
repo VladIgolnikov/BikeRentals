@@ -1,7 +1,7 @@
 {
-  "name": "bike-rental",
+  "name": "bike-rentals",
   "version": "1.0.0",
-  "description": "TopView Recruitment",
+  "description": "TopView Practical Test",
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand",
