@@ -1,6 +1,8 @@
-# Bike Rentals
+# TopView Bike Rentals
 
-TopView Bike Rentals 
+A Practical Test Web App 
+
+- Rent bikes and bike accessories for pretend! - 
 
 
 [www.websitename.com](http://www.awslink.com)
