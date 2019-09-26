@@ -36,19 +36,21 @@ for (let product of products) {
   db.run(
     `INSERT OR IGNORE INTO products (id, name, price, image, product_type) VALUES (?, ?, ?, ?, ?)`,
     [
-      product.id, 
-      product.name, 
-      product.price, 
-      product.image, 
+      product.id,
+      product.name,
+      product.price,
+      product.image,
       product.product_type
     ],
     err => {
       if (err) {
-        console.error(`ERROR >> could not seed products table >> ${err.message}`);
+        console.error(
+          `ERROR >> could not seed products table >> ${err.message}`
+        );
       }
     }
   );
-};
+}
 
 db.close(err => {
   if (err) {
