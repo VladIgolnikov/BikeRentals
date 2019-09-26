@@ -2,7 +2,7 @@
 
 A Practical Test Web App 
 
-- Rent bikes and bike accessories for pretend! - 
+*Rent bikes and bike accessories for pretend!*
 
 
 [www.websitename.com](http://www.awslink.com)
