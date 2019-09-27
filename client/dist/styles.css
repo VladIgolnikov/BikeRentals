@@ -18,8 +18,10 @@ div.app {
 }
 
 div.main {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  padding-top: 25px;
 }
 
 .page-title h1 {
@@ -47,7 +49,7 @@ div.page-title {
 }
 
 img.cart {
-  height: 75px;
+  height: 50px;
   margin-right: 50px;
 }
 
@@ -59,16 +61,21 @@ div.products {
 
 .products h2{
   font-weight: 500;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-ul.bicycles,
-ul.accessories {
+ul.products {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
   padding: 10px;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   list-style: none;
 }
 
@@ -79,7 +86,6 @@ li.product-card {
 
 li.product-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
 }
 
 div.product-info {
@@ -97,4 +103,38 @@ div.image-container {
 
 p.product-price, p.product-title{
   font-weight: 500;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p.product-price{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+p.product-title{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+div.add-to-cart-container {
+  background-color: rgba(35, 35, 40, .75);
+}
+
+div.toggle-count {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+.toggle-count img {
+  height: 25px;
+  cursor: pointer;
 }
