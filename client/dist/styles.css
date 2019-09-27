@@ -93,12 +93,21 @@ div.product-info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(115, 115, 126, 0.8);
+  background-color: rgba(35, 35, 40, .9);
   color: white;
 }
 
 div.image-container {
   height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(35, 35, 40, .75);
+}
+
+img.product-image {
+  height: 230px;
 }
 
 p.product-price, p.product-title{
@@ -119,7 +128,7 @@ p.product-title{
 }
 
 div.add-to-cart-container {
-  background-color: rgba(35, 35, 40, .75);
+  background-color: rgb(35, 35, 40);
 }
 
 div.toggle-count {
