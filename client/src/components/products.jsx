@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleCart from './toggleCart.jsx'
+import ToggleCount from './toggleCount.jsx'
 
 const Products = props => {
   return (
@@ -19,7 +19,7 @@ const Products = props => {
             </div>
             <div className='add-to-cart-container'>
               <div className='toggle-quantity'>
-                <ToggleCart
+                <ToggleCount
                   product={product}
                   cart={props.cart}
                   decreaseCount={props.decreaseCount}

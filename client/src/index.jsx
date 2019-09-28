@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import Products from './components/products.jsx';
+import Cart from './components/cart.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,12 +10,15 @@ class App extends React.Component {
     this.state = {
       bicycles: [],
       accessories: [],
-      cart: {}
+      cart: {},
+      showProducts: true,
+      showCart: false
     };
 
     this.getProducts = this.getProducts.bind(this);
     this.decreaseCount = this.decreaseCount.bind(this);
     this.increaseCount = this.increaseCount.bind(this);
+    this.toggleCart = this.toggleCart.bind(this);
   }
 
   componentDidMount() {
@@ -77,8 +81,15 @@ class App extends React.Component {
     });
   }
 
+  toggleCart() {
+    this.setState({
+      showCart: !this.state.showCart,
+      showProducts: !this.state.showProducts
+    });
+  }
+
   render() {
-    const { bicycles, accessories, cart } = this.state;
+    const { bicycles, accessories, cart, showCart, showProducts } = this.state;
 
     return (
       <div className='app'>
@@ -88,30 +99,50 @@ class App extends React.Component {
               <h1>TopView Bike Rentals</h1>
             </div>
             <div className='nav-right'>
-              <img className='cart' src={Object.keys(cart).length > 0 ? './img/cart-filled-icon.png' : './img/cart-icon.png'}/>
+              <img
+                className='cart'
+                src={
+                  Object.keys(cart).length > 0
+                    ? './img/cart-filled-icon.png'
+                    : './img/cart-icon.png'
+                }
+                onClick={()=>this.toggleCart()}
+              />
             </div>
           </div>
         </header>
-        <div className='main'>
-          <div className='products'>
-            <h2>Select Bicycles</h2>
+        {!showProducts ? null : (
+          <div className='main'>
+            <div className='products'>
+              <h2>Select Bicycles</h2>
+              <Products
+                products={bicycles}
+                cart={cart}
+                decreaseCount={this.decreaseCount}
+                increaseCount={this.increaseCount}
+              />
+            </div>
+            <div className='products'>
+              <h2>Add Accessories</h2>
+            </div>
             <Products
-              products={bicycles}
+              products={accessories}
               cart={cart}
               decreaseCount={this.decreaseCount}
               increaseCount={this.increaseCount}
             />
           </div>
-          <div className='products'>
-            <h2>Add Accessories</h2>
-          </div>
-          <Products
-            products={accessories}
+        )}
+        {!showCart ? null : (
+          <div className = 'cart-container'>
+          <Cart 
             cart={cart}
             decreaseCount={this.decreaseCount}
             increaseCount={this.increaseCount}
-          />
-        </div>
+            toggleCart={this.toggleCart}
+            />
+          </div>
+        )}
       </div>
     );
   }

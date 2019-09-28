@@ -51,6 +51,7 @@ div.page-title {
 img.cart {
   height: 40px;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 div.products {
@@ -60,7 +61,7 @@ div.products {
   align-items: space-evenly;
 }
 
-.products h2{
+.products h2 {
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -89,7 +90,8 @@ ul.products {
 
 li.product-card {
   margin: 50px;
-  box-shadow: 1px 1px 5px lightgray;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  height: 415px;
 }
 
 li.product-card:hover {
@@ -101,7 +103,7 @@ div.product-info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(35, 35, 40, .9);
+  background-color: rgba(35, 35, 40, 0.9);
   color: white;
 }
 
@@ -111,26 +113,27 @@ div.image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(35, 35, 40, .75);
+  background-color: rgba(35, 35, 40, 0.75);
 }
 
 img.product-image {
   height: 230px;
 }
 
-p.product-price, p.product-title{
+p.product-price,
+p.product-title {
   font-weight: 500;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-p.product-price{
+p.product-price {
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
-p.product-title{
+p.product-title {
   margin-top: 20px;
   margin-bottom: 5px;
 }
@@ -151,7 +154,167 @@ div.toggle-count {
   font-size: 30px;
 }
 
-.toggle-count img {
-  height: 25px;
+.toggle-count p {
+  font-size: 40px;
   cursor: pointer;
+  margin: 10px 0px 10px 0px;
+}
+
+div.cart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.cart {
+  display: inline-block;
+}
+
+div.cart-card {
+  margin: 20px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  background-color: rgba(255, 249, 240, 0.95);
+  color: rgb(35, 35, 40);
+  padding: 10px;
+  box-shadow: 1px 1px 5px gray;
+  align-self: center;
+}
+
+.cart-card h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+h2.no-items {
+  text-decoration: none;
+}
+
+.cart ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li.product-line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.product-line div.product-info {
+  background-color: rgba(255, 249, 240, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-line p {
+  background-color: rgba(255, 249, 240, 0.1);
+  color: rgb(35, 35, 40);
+  padding: 10px;
+  font-size: 25px;
+}
+
+.product-line div.add-to-cart-container {
+  background-color: rgba(255, 249, 240, 0.1);
+}
+
+.product-line div.toggle-count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: rgb(35, 35, 40);
+  font-size: 25px;
+}
+
+.product-line p.minus-button {
+  padding: 10px 12px 14px 10px;
+}
+
+p.equals {
+  padding: 10px 20px 10px 20px;
+}
+
+p.total {
+  margin-right: 10px;
+  color: rgb(35, 35, 40);
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+div.total-line{
+  height: 2px;
+  width: 150px;
+  background-color: rgb(35, 35, 40);
+  float: right;
+}
+
+div.place-order{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.place-order div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-order h3{
+  font-size: 20px;
+  color: rgba(200, 0, 0, 0.9);
+}
+
+button.checkout{
+  background-color: rgb(35, 35, 40);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button.checkout:hover{
+  box-shadow: 0 5px 15px rgba(117, 115, 115, 0.8);
+}
+
+
+button.checkout:disabled{
+  background-color: rgb(35, 35, 40);
+  opacity: 0.5;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: none;
+}
+
+p.toggle-cart{
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgba(0, 111, 175, 0.959);
 }

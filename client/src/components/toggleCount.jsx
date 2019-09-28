@@ -1,21 +1,27 @@
 import React from 'react';
 
-const ToggleCart = props => {
+const ToggleCount = props => {
   return (
     <div className='toggle-count'>
-      <img className='minus-button' src='./img/minus-icon.png'
+      <p
+        className='minus-button'
         onClick={() => {
           props.decreaseCount(props.product);
         }}
-      />
+      >
+        -
+      </p>
       {props.cart[props.product.id] ? props.cart[props.product.id].count : 0}
-      <img className='plus-button' src='./img/plus-icon.png'
+      <p
+        className='plus-button'
         onClick={() => {
           props.increaseCount(props.product);
         }}
-      />
+      >
+        +
+      </p>
     </div>
   );
 };
 
-export default ToggleCart;
+export default ToggleCount;
