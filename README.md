@@ -5,7 +5,7 @@ A Practical Test Web App
 *Rent bikes and bike accessories for pretend!*
 
 
-[www.websitename.com](http://www.awslink.com)
+[bit.ly/TopViewBikes](bit.ly/TopViewBikes)
 
 
 ## Table of Contents
@@ -18,20 +18,11 @@ A Practical Test Web App
 
 ## Functionality: 
 
-### Something Page
-
--    Lorem ipsum:
-  - `lorem`
-  - `ipsum`
-
-### Lorem Ipsum Page
-
--    The lorem ipsum information:
-  - `foo`
-  - `bar`
-  - `baz`
-
--    Hello World. 
+On page load, the application sends an API request to fetch Bicycles and Accessories from a remote database.  
+Products are displayed on product cards containing quantity selectors, which are rendered in responsive grid.
+Updating a product's quantity will add/remove it from the shopping cart.
+Clicking the cart icon displays a summary of the shopping cart contents, as well as a checkout button.
+Accessories can only be checked out with a bike selection.
 
 
 ## Notes
