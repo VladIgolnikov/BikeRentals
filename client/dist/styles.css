@@ -28,6 +28,7 @@ div.main {
   font-family: 'Major Mono Display', monospace;
   color: white;
   font-size: 4vw;
+  cursor: pointer;
 }
 
 div.nav-header {

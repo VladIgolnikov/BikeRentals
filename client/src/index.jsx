@@ -19,6 +19,7 @@ class App extends React.Component {
     this.decreaseCount = this.decreaseCount.bind(this);
     this.increaseCount = this.increaseCount.bind(this);
     this.toggleCart = this.toggleCart.bind(this);
+    this.backToMain = this.backToMain.bind(this);
   }
 
   componentDidMount() {
@@ -88,6 +89,14 @@ class App extends React.Component {
     });
   }
 
+  backToMain(){
+    this.setState({
+      showCart: false,
+      showProducts: true
+    });
+  }
+
+
   render() {
     const { bicycles, accessories, cart, showCart, showProducts } = this.state;
 
@@ -96,7 +105,7 @@ class App extends React.Component {
         <header className='navbar'>
           <div className='nav-header'>
             <div className='page-title'>
-              <h1>TopView Bike Rentals</h1>
+              <h1 className='logo' onClick={()=>{this.backToMain()}}>TopView Bike Rentals</h1>
             </div>
             <div className='nav-right'>
               <img
