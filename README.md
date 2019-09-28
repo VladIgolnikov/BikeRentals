@@ -5,7 +5,7 @@ A Practical Test Web App
 *Rent bikes and bike accessories for pretend!*
 
 
-[bit.ly/TopViewBikes](bit.ly/TopViewBikes)
+[bit.ly/TopViewBikes](http://bit.ly/TopViewBikes)
 
 
 ## Table of Contents
